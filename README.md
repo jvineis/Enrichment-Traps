@@ -2,8 +2,7 @@
 
 ## 16S Amplicon analysis
 
-
-
+### We used DADA2 to process the 16S sequence data. Below are the steps used to produce the Amplicon Sequence Variants (ASV).All the steps for this are contained in the R txt file on the main page of this git.
 
 ## Metagenomic analysis: assembly, mapping, anvio profiling, and draft genome recovery from each of the eight trap wells that we conducted metagenomic sequencing
 
