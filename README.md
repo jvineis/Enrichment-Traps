@@ -2,7 +2,7 @@
 
 ## 16S Amplicon analysis
 
-### We used DADA2 to process the 16S sequence data. The sequence data required to run the DADA2 pipeline can be found here (figshare/NCBI). Below are the steps used to produce the Amplicon Sequence Variants (ASV).All the steps for this are contained in the R txt file on the main page of this git. DADA2-PROCESSING-COMPETITION.R
+### We used DADA2 to process the 16S sequence data. The sequence data required to run the DADA2 pipeline can be found here https://figshare.com/articles/dataset/16S_sequences_derived_from_microbial_enrichment_traps/13650800. Below are the steps used to produce the Amplicon Sequence Variants (ASV). All the steps for this are contained in the R txt file on the main page of this git. DADA2-PROCESSING-COMPETITION.R
 
 ## Metagenomic analysis: assembly, mapping, anvio profiling, and draft genome recovery from each of the eight trap wells that we conducted metagenomic sequencing
 
