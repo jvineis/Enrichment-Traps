@@ -6,10 +6,12 @@
 
 ## We begin with the assembly of quality filtered reads that can be obtained from NCBI under the submission id XXXX.  We assembled each of the metagenomic datasets recovered from each trap well. Below is an example of the assembly of the metagenomic data synthesized for trap well 1. We conducted the same assembly process for each of the eight metagenomic data sets  
 
-    spades.py	-k	21,33,55,77,99,127	--careful	-1	/automounts/workspace/workspace/jvineis/CULTIVAR-DEMULTIPLEX/cultivar-idx1-QUALITY_PASSED_R1.fastq	-2	/automounts/workspace/workspace/jvineis/CULTIVAR-DEMULTIPLEX/cultivar-idx1-QUALITY_PASSED_R2.fastq	-o	/automounts/workspace/workspace/jvineis/CULTIVAR-DEMULTIPLEX/cultivar-idx1-spades
+    spades.py -k 21,33,55,77,99,127 --careful -1 cultivar-idx1-QUALITY_PASSED_R1.fastq -2 cultivar-idx1-QUALITY_PASSED_R2.fastq -o cultivar-idx1-spades
 
 ## Map each of the short read datasets to each individual assembly using bowtie2. Start by building a bowtie2 database and then run a for loop to map each of the short read datasets to the bowtie2 database.
 
+    cd cultivar-idx1-spades
+    
     bowtie2-build scaffolds.fasta bowtie2db
     
     for i in `cat samples.txt`; do clusterize bowtie2 --very-sensitive -x bowtie2db -1 ../"$i"-QUALITY_PASSED_R1.fastq -2 ../"$i"-QUALITY_PASSED_R2.fastq -S "$i".sam; done
